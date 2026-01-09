@@ -218,3 +218,9 @@ app.use(express.json()); //This middleware will parse JSON bodies: req.body
 Midlleware/RateLimiting
 Using Redis for the Ratelimiting between users and the API
 Redis database, that stores key-value pairs instead of JSON body for actual data in the mongoDB database, they are both NO-SQL.
+
+{/_ TailwindCSS is used here in the className!
+The Clcick me! text has color red, padding = 4px and background-color is pink. _/}
+<button onClick={() => toast.success('Congrats')} className="text-red-500 p-4 bg-pink-300 bg">
+Click me!
+</button>
