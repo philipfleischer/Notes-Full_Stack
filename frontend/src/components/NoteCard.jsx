@@ -13,7 +13,7 @@ const NoteCard = ({ note, setNotes }) => {
     try {
       await api.delete(`/notes/${id}`);
       setNotes((prev) => prev.filter((note) => note._id !== id)); //Get rid of the deleted note from homescreen
-      toast.success('Note delteted Successfully!');
+      toast.success('Note deleted Successfully!');
     } catch (error) {
       console.log('Error in handleDelete', error);
       toast.error('Failed to delete note');
