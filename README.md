@@ -203,4 +203,18 @@ No License as of now!
 ## Notes
 
 What is an Endpoint?
-An endpoint is a combination of an URL + HTTP method that lets the client interact with a specific resource
+An endpoint is a combination of an URL + HTTP method that lets the client interact with a specific resource-
+
+//Middleware
+app.use(express.json()); //This middleware will parse JSON bodies: req.body
+
+//Simple custom middleware:
+// app.use((req, res, next) => {
+// console.log(`Req method is ${req.method} & Req URL is ${req.url}`);
+// next();
+// });
+// Test on GET gave me: Req method is GET & Req URL is /api/notes
+
+Midlleware/RateLimiting
+Using Redis for the Ratelimiting between users and the API
+Redis database, that stores key-value pairs instead of JSON body for actual data in the mongoDB database, they are both NO-SQL.
