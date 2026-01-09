@@ -197,3 +197,10 @@ It is built specifically as a portfolio project to showcase professional-level d
 ## License
 
 No License as of now!
+
+---
+
+## Notes
+
+What is an Endpoint?
+An endpoint is a combination of an URL + HTTP method that lets the client interact with a specific resource
