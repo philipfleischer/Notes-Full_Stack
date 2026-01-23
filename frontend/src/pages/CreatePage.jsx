@@ -9,7 +9,7 @@ const CreatePage = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
-  // group UI
+  // group UI -
   const [groupMenuOpen, setGroupMenuOpen] = useState(false);
   const [groupNames, setGroupNames] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState(null);
