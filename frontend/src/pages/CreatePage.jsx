@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router';
 import api from '../lib/axios';
-import { addNoteToGroup, ensureGroup, getGroupNames } from '../lib/groups';
+import { ensureGroup, getGroupNames } from '../lib/groups';
 
 const CreatePage = () => {
   const [title, setTitle] = useState('');
@@ -72,13 +72,13 @@ const CreatePage = () => {
 
     setLoading(true);
     try {
-      const res = await api.post('/notes', { title, content, group: groupValue });
+      const res = await api.post('/notes', { title, content, group: selectedGroup ?? null });
       const created = res.data;
       const id = created?._id;
 
-      if (selectedGroup && id) {
-        addNoteToGroup(id, selectedGroup);
-      }
+      // if (selectedGroup && id) {
+      //   addNoteToGroup(id, selectedGroup);
+      // }
 
       toast.success('Note created successfully!');
       navigate('/');
