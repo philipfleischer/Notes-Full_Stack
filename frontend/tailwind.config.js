@@ -9,6 +9,26 @@ export default {
   plugins: [daisyui],
   daisyui: {
     themes: [
+      {
+        'light-blue': {
+          primary: '#38bdf8',
+          'primary-content': '#06253a',
+          secondary: '#0ea5e9',
+          'secondary-content': '#06253a',
+          accent: '#22d3ee',
+          'accent-content': '#06253a',
+          neutral: '#111827',
+          'neutral-content': '#ffffff',
+          'base-100': '#ffffff',
+          'base-200': '#f8fafc',
+          'base-300': '#eef2f7',
+          'base-content': '#0f172a',
+          info: '#38bdf8',
+          success: '#22c55e',
+          warning: '#f59e0b',
+          error: '#ef4444',
+        },
+      },
       'light',
       'dark',
       'cupcake',

@@ -2,7 +2,7 @@ import Note from '../models/Note.js';
 
 export async function getAllNotes(_, res) {
   try {
-    const notes = await Note.find().sort({ createdAt: -1 }); //Newest Note first in overview in app
+    const notes = await Note.find().sort({ createdAt: -1 }); //Newest Note first
     res.status(200).json(notes);
   } catch (error) {
     console.log('Error in getAllNotes controller', error);
@@ -21,11 +21,16 @@ export async function getNoteById(req, res) {
   }
 }
 
-//User wants to create a note: need a title and text-content
+// Need a title and text-content
 export async function createNote(req, res) {
   try {
-    const { title, content } = req.body;
-    const newNote = new Note({ title, content });
+    const { title, content, group } = req.body;
+
+    const newNote = new Note({
+      title,
+      content,
+      group: group?.trim() ? group.trim() : null,
+    });
 
     const savedNote = await newNote.save();
     res.status(201).json(savedNote);
@@ -37,12 +42,18 @@ export async function createNote(req, res) {
 
 export async function updateNote(req, res) {
   try {
-    const { title, content } = req.body;
+    const { title, content, group } = req.body;
+
     const updatedNote = await Note.findByIdAndUpdate(
       req.params.id,
-      { title, content },
+      {
+        title,
+        content,
+        group: group?.trim() ? group.trim() : null,
+      },
       { new: true },
     );
+
     if (!updatedNote) return res.status(404).json({ message: 'Note not found' });
     res.status(200).json(updatedNote);
   } catch (error) {

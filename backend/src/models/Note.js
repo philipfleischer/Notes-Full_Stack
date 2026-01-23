@@ -9,10 +9,17 @@ const noteSchema = new mongoose.Schema(
     title: {
       type: String,
       required: true,
+      trim: true,
     },
     content: {
       type: String,
       required: true,
+      trim: true,
+    },
+    group: {
+      type: String,
+      default: null,
+      trim: true,
     },
   },
   { timestamps: true }, //createdAt, updatedAt
