@@ -22,6 +22,11 @@ if (process.env.NODE_ENV !== 'production') {
   );
 }
 app.use(express.json()); //This middleware will parse JSON bodies: req.body
+
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ ok: true });
+});
+
 app.use(rateLimiter);
 
 app.use('/api/notes', notesRoutes);
@@ -46,8 +51,4 @@ connectDB().then(() => {
   app.listen(PORT, () => {
     console.log('Server started on PORT:', PORT);
   });
-});
-
-app.get('/api/health', (req, res) => {
-  res.status(200).json({ ok: true });
 });
