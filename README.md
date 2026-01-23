@@ -8,10 +8,9 @@ The project focuses on clean REST API design, correct use of HTTP standards, rat
 By the end of this project, I have built and deployed a production-ready REST API and a modern web application following real-world backend and frontend best practices.
 
 ### Live demo
+
 Short walkthrough showing note CRUD: Creation, Read, Editing, Deletion, and API interaction.
 https://github.com/user-attachments/assets/5bb9d7c5-197e-4338-ae93-469ce2731720
-
-
 
 ---
 
@@ -199,3 +198,10 @@ This project is designed to demonstrate:
 It is built specifically as a portfolio project to showcase professional-level development skills.
 
 ---
+
+## Acknowledgements
+
+This project was initially inspired by the concepts and structure demonstrated in the following video:
+https://www.youtube.com/watch?v=F9gB5b4jgOI
+
+I have since redesigned, reimplemented, and significantly expanded the original ideas to build a fully functional Notes application with custom backend, group filtering, UI features, and database integration. All code, feature design, and architecture are my own.
