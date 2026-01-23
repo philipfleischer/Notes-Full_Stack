@@ -13,6 +13,8 @@ jobs:
         run: sleep 25
 
       - name: Health check
+        env:
+          RENDER_HEALTH_URL: ${{ secrets.RENDER_HEALTH_URL }}
         run: |
           set -e
           curl -fsS "$RENDER_HEALTH_URL"
