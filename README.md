@@ -9,8 +9,8 @@ By the end of this project, I have built and deployed a production-ready REST AP
 
 ### Live demo
 
-Short walkthrough showing note CRUD: Creation, Read, Editing, Deletion, and API interaction.
-https://github.com/user-attachments/assets/5bb9d7c5-197e-4338-ae93-469ce2731720
+Short walkthrough showing note CRUD: Creation, Read, Editing, Deletion, and API interaction:
+https://github.com/user-attachments/assets/ac02731a-c663-4e68-af56-5d6a4d5f7a34
 
 ---
 
