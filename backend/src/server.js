@@ -47,3 +47,7 @@ connectDB().then(() => {
     console.log('Server started on PORT:', PORT);
   });
 });
+
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ ok: true });
+});

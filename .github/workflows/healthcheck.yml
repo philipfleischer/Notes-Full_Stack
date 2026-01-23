@@ -1,0 +1,18 @@
+name: Render Health Check
+
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+
+jobs:
+  healthcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Render deploy
+        run: sleep 25
+
+      - name: Health check
+        run: |
+          set -e
+          curl -fsS "$RENDER_HEALTH_URL"
