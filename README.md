@@ -160,7 +160,7 @@ npm run dev
 
 cd frontend
 npm install
-npm start
+npm run dev
 
 The frontend communicates with the backend through the REST API.
 
